@@ -16,11 +16,16 @@
                     こんにちは {{ auth()->user()->username }}さん
                 </i>
                 
+                @admin
+                    <a href="admin/posts">ダッシュボード</a>
+                    <a href="admin/profile">プロフィール</a>
+                @endadmin
+
                 <form method="POST" action="/logout" class="dropdown-item">
                     @csrf
                     <button type="submit">ログアウト</button>
                 </form>
-                
+
                 @else
                 <ul class="main-nav">
                     <li><a href="login">ログイン</a></li>
