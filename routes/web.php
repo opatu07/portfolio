@@ -1,22 +1,27 @@
 <?php
 
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SessionsController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('layout');
-});
+Route::get('/', [PostController::class, 'index'])->name('home');
 
-Route::get('login', [LoginController::class, 'getAuth'] )->middleware('guest');
-Route::post('login', [LoginController::class, 'postAuth'])->middleware('guest');
+Route::get('login', [SessionsController::class, 'create'])->middleware('guest');
+Route::post('login', [SessionsController::class, 'store'])->middleware('guest');
 
-Route::post('logout', [LoginController::class, 'logout'])->middleware('auth');
+Route::get('posts/{post:slug}', [PostController::class, 'show']);
+
+Route::post('logout', [SessionsController::class, 'logout'])->middleware('auth');
 
 Route::get('register', [RegisterController::class, 'create'])->middleware('guest');
 Route::post('register', [RegisterController::class, 'store'])->middleware('guest');
 
-Route::get('admin/posts/create', [PostController::class, 'create'])->middleware('admin');
+Route::middleware('can:admin')->group(function () {
+    Route::resource('admin/posts', AdminPostController::class)->except('show');
+});
+
+Route::post('/admin/posts/{id}', [HomeController::class,'destroy'])->middleware('can:admin');
 
 

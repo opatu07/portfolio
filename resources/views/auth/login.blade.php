@@ -1,20 +1,18 @@
-@extends('layout')
+<x-layout>
+    <section class="px-6 py-8">
+        <main class="max-w-lg mx-auto mt-10">
+            <x-panel>
+                <h1 class="text-center font-bold text-xl">ログイン画面</h1>
 
-@section('content')
-    <div class="container">
-        <form action="/login" method="post">
-            @csrf
-                <p class="fsize">ログイン</p>
-                <input type="text" name="email" placeholder="メールアドレス">
-                @error('email')
-                    <div class="error"><span>{{ $message }}</span></div>
-                @enderror
-                <input type="password" name="password" placeholder="パスワード">
-                @error('password')
-                    <div class="error"><span>{{ $message }}</span></div>
-                @enderror
-                <button type="submit" value="send">ログイン</button>
-        </form>
-    </div>
-@endsection
+                <form method="POST" action="/login" class="mt-10">
+                    @csrf
 
+                    <x-form.input name="email" type="email" autocomplete="username" required />
+                    <x-form.input name="password" type="password" autocomplete="current-password" required />
+
+                    <x-form.button>ログイン!</x-form.button>
+                </form>
+            </x-panel>
+        </main>
+    </section>
+</x-layout>

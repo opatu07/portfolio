@@ -6,14 +6,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
-class LoginController extends Controller
+class SessionsController extends Controller
 {
-    public function getAuth()
+    public function create()
     {   
-        return view('auth.login');
+        return view('auth/login');
     }
 
-    public function postAuth(Request $request)
+    public function store(Request $request)
     {
         $validated = $request->validate([
             'email' => 'required|email',
@@ -29,7 +29,7 @@ class LoginController extends Controller
 
         session()->regenerate();
 
-        return view('auth.login')->with('success', 'アカウント登録できました。');
+        return view('auth/login')->with('success', 'アカウント登録できました。');
     }
 
     public function logout()
