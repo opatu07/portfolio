@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\AdminPostController;
+use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
 use Illuminate\Support\Facades\Route;
@@ -22,6 +24,20 @@ Route::middleware('can:admin')->group(function () {
     Route::resource('admin/posts', AdminPostController::class)->except('show');
 });
 
-Route::post('/admin/posts/{id}', [HomeController::class,'destroy'])->middleware('can:admin');
+Route::get('/profile', [ProfileController::class, 'edit']);
+
+Route::patch('/profile', [ProfileController::class, 'update']);
+
+Route::delete('/profile', [ProfileController::class, 'destroy']);
+
+Route::post('email/verification-notification', [EmailVerificationNotificationController::class, 'store']);
+
+Route::put('password', [PasswordController::class, 'update']);
+
+Route::delete('/profile', [ProfileController::class, 'destroy']);
+
+
+
+
 
 

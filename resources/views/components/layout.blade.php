@@ -51,7 +51,7 @@
 
                         <x-dropdown-item
                                 href="/profile"
-                                :active="request()->is('profile')"
+                                
                             >
                                 プロフィール
                         </x-dropdown-item>
