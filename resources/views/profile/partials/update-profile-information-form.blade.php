@@ -18,7 +18,7 @@
         @method('patch')
 
         <div>
-            <x-form.input name="username" :value="old('title', $user->username)" />
+            <x-form.input name="username" :value="old('username', $user->username)" required />
         </div>
 
         <div>

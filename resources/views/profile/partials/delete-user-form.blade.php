@@ -28,9 +28,7 @@
             </p>
 
             <div class="mt-6">
-
-                <x-form.input name="password" type="password" autocomplete="current-password" required />
-
+                <x-form.input name="password" type="password" autocomplete="current-password" value="{{ __('Password') }}" required />
             </div>
 
             <div class="mt-6 flex justify-end">
