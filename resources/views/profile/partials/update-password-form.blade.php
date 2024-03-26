@@ -13,6 +13,8 @@
         @csrf
         @method('put')
         <div>
+
+
             <x-form.input name="current_password" required />
         </div>
 
@@ -22,6 +24,7 @@
 
         <div>
             <x-form.input name="password_confirmation" required />
+
         </div>
 
         <div class="flex items-center gap-4">
