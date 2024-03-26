@@ -13,23 +13,21 @@
                             name="username"
                             id="username"
                         >
+
                     <x-form.error name="username"/>
                     
                     <!--メールアドレス-->
                     
                     <div class="py-2">
-
-                    <x-form.label name="メールアドレス"/>  
-                        <input class="border border-gray-200 p-2 w-full rounded"
-                            name="email"
-                            id="email"
-                            type="email"
-                        >
-                    <x-form.error name="email"/>
-
+                      <x-form.label name="メールアドレス"/>  
+                          <input class="border border-gray-200 p-2 w-full rounded"
+                              name="email"
+                              id="email"
+                              type="email"
+                          >
+                      <x-form.error name="email"/>
                     </div>
 
-                    
                     
                     <!--パスワード-->
 
@@ -42,8 +40,9 @@
                             >
                         <x-form.error name="password"/>
                     </div>
+                    
+                    <x-form.button>登録！</x-form.button>
 
-                    <x-form.button>登録</x-form.button>
                 </form>
             </x-panel>
         </main>
