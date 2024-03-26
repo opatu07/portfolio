@@ -18,11 +18,23 @@
         @method('patch')
 
         <div>
-            <x-form.input name="username" :value="old('username', $user->username)" required />
+            <x-form.label name="ユーザーネーム"/>  
+                <input class="border border-gray-200 p-2 w-full rounded"
+                    name="username"
+                    id="username"
+                    value="{{ old('username', $user->username) }}"
+                >
+            <x-form.error name="username"/>
         </div>
 
         <div>
-            <x-form.input name="email" :value="old('email', $user->email)" required />
+            <x-form.label name="メールアドレス"/>  
+                <input class="border border-gray-200 p-2 w-full rounded"
+                    name="email"
+                    id="email"
+                    value="{{ old('email', $user->email) }}"
+                >
+            <x-form.error name="email"/>
             @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
                 <div>
                     <p class="text-sm mt-2 text-gray-800">

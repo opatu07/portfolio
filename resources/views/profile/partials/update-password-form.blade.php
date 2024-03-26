@@ -13,18 +13,33 @@
         @csrf
         @method('put')
         <div>
-
-
-            <x-form.input name="current_password" required />
+            <x-form.label name="現在のパスワード"/>  
+                <input class="border border-gray-200 p-2 w-full rounded"
+                    name="current_password"
+                    id="current_password"
+                    type="password"
+                >
+            <x-form.error name="current_password"/>
         </div>
 
         <div>
-            <x-form.input name="password" required />
+            <x-form.label name="新しいパスワード"/>  
+                <input class="border border-gray-200 p-2 w-full rounded"
+                    name="password"
+                    id="password"
+                    type="password"
+                >
+            <x-form.error name="password"/>
         </div>
 
         <div>
-            <x-form.input name="password_confirmation" required />
-
+            <x-form.label name="パスワードの確認"/>  
+                <input class="border border-gray-200 p-2 w-full rounded"
+                    name="password_confirmation"
+                    id="password_confirmation"
+                    type="password"
+                >
+            <x-form.error name="password_confirmation"/>
         </div>
 
         <div class="flex items-center gap-4">

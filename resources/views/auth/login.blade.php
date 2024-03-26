@@ -6,9 +6,28 @@
 
                 <form method="POST" action="/login" class="mt-10">
                     @csrf
+                    <!--メールアドレス-->
 
-                    <x-form.input name="email" type="email" autocomplete="username" required />
-                    <x-form.input name="password" type="password" autocomplete="current-password" required />
+                    <x-form.label name="メールアドレス"/>  
+                        <input class="border border-gray-200 p-2 w-full rounded"
+                            name="email"
+                            id="email"
+                            type="email"
+                        >
+                    <x-form.error name="email"/>
+
+                    <!--パスワード-->
+
+                    <div class="pt-2">
+                        <x-form.label name="パスワード"/>  
+                            <input class="border border-gray-200 p-2 w-full rounded"
+                                name="password"
+                                id="password"
+                                type="password"
+                            >
+                        <x-form.error name="password"/>
+                    </div>
+
                     <x-form.button>ログイン!</x-form.button>
                 </form>
                 <div class="flex items-center justify-end mt-4">
