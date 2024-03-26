@@ -11,11 +11,11 @@
 
             <ul>
                 <li>
-                    <a href="/admin/posts" class="{{ request()->is('admin/posts') ? 'text-blue-500' : '' }}">全ての投稿</a>
+                    <a href="/admin/posts" class="{{ request()->is('admin/posts') ? 'text-orange-500' : '' }}">全ての投稿</a>
                 </li>
 
                 <li>
-                    <a href="/admin/posts/create" class="{{ request()->is('admin/posts/create') ? 'text-blue-500' : '' }}">新しい記事を作る</a>
+                    <a href="/admin/posts/create" class="{{ request()->is('admin/posts/create') ? 'text-orange-500' : '' }}">新しい記事を作る</a>
                 </li>
             </ul>
         </aside>
