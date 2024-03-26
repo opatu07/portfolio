@@ -1,11 +1,11 @@
 <section class="space-y-6">
     <header>
         <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-            {{ __('Delete Account') }}
+            {{ __('アカウントを削除する') }}
         </h2>
 
         <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-            {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.') }}
+            {{ __('アカウントを削除すると、全てのデータとファイルが完全に削除されます。アカウントを削除する前に必要なデータがあれば事前にダウンロードの実施をお願いします。') }}
         </p>
     </header>
 
@@ -24,18 +24,19 @@
             </h2>
 
             <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.') }}
+                {{ __('アカウントを削除すると、全てのデータとファイルが完全に削除されます。完全にアカウントを削除するためには、確認のために再度パスワードを入力してください。') }}
             </p>
 
             <div class="mt-6">
-                <x-form.label name="パスワード"/>  
-                    <input class="border border-gray-200 p-2 w-full rounded"
-                        name="password"
-                        id="password"
-                        type="password"
-                        autocomplete="current-password"
-                    >
-                <x-form.error name="password"/>                
+                <div class="pt-2">
+                    <x-form.label name="パスワード"/>  
+                        <input class="border border-gray-200 p-2 w-full rounded"
+                            name="password"
+                            id="password"
+                            type="password"
+                        >
+                    <x-form.error name="password"/>
+                 </div>
             </div>
 
             <div class="mt-6 flex justify-end">

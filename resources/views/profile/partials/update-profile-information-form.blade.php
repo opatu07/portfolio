@@ -1,11 +1,11 @@
 <section>
     <header>
         <h2 class="text-lg font-medium text-gray-900">
-            {{ __('プロフィール情報') }}
+            {{ __('プロフィール情報を変更する') }}
         </h2>
 
         <p class="mt-1 text-sm text-gray-600">
-            {{ __("Update your account's profile information and email address.") }}
+            {{ __("ユーザーネームとメールアドレスを更新できます。") }}
         </p>
     </header>
 
