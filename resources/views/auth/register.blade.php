@@ -6,10 +6,41 @@
 
                 <form method="POST" action="/register" class="mt-10">
                     @csrf
-                    <x-form.input name="username" required />
-                    <x-form.input name="email" type="email" required />
-                    <x-form.input name="password" type="password" autocomplete="new-password" required />
-                    <x-form.button>登録</x-form.button>
+                    <!--ユーザーネーム-->
+
+                    <x-form.label name="ユーザーネーム"/>  
+                        <input class="border border-gray-200 p-2 w-full rounded"
+                            name="username"
+                            id="username"
+                        >
+
+                    <x-form.error name="username"/>
+
+                    <!--メールアドレス-->
+
+                    <div class="pt-2">
+                        <x-form.label name="メールアドレス"/>  
+                            <input class="border border-gray-200 p-2 w-full rounded"
+                                name="email"
+                                id="email"
+                                type="email"
+                            >
+                        <x-form.error name="email"/>
+                    </div>
+
+                    <!--パスワード-->
+
+                    <div class="pt-2">
+                        <x-form.label name="パスワード"/>  
+                            <input class="border border-gray-200 p-2 w-full rounded"
+                                name="password"
+                                id="password"
+                                type="password"
+                            >
+                        <x-form.error name="password"/>
+                    </div>
+                    
+                    <x-form.button>登録！</x-form.button>
                 </form>
             </x-panel>
         </main>
