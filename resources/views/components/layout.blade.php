@@ -1,7 +1,7 @@
 <!doctype html>
 
 <title>portfolio</title>
-<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -22,12 +22,12 @@
     }
 </style>
 
-<body style="font-family: Open Sans, sans-serif">
-    <section class="px-6 py-8">
+<body class="flex flex-col min-h-screen">
+    <section class="px-6 pt-8">
         <nav class="md:flex md:justify-between md:items-center">
             <div>
                 <a href="/">
-                    portfolio
+                    <img src="/images/icon.jpg" alt="portfolio Logo" width="165" height="16">
                 </a>
             </div>
 
@@ -70,12 +70,12 @@
                     </x-dropdown>
                 @else
                     <a href="/register"
-                       class="text-xs font-bold uppercase">
+                       class="text-xl text-orange-400 font-bold uppercase">
                         ユーザー登録
                     </a>
 
                     <a href="/login"
-                       class="ml-6 text-xs font-bold uppercase">
+                       class="mx-14 text-orange-400 text-xl font-bold uppercase">
                         ログイン
                     </a>
                 @endauth
@@ -83,11 +83,9 @@
         </nav>
 
         {{ $slot }}
-            <footer>
-                <div class="wrapper">
-                    <p><small>&copy; 2024 Nishi</small></p>
-                </div>   
+            <footer class="bg-gray-200">
+                    <p class="p-2 text-center text-xs">&copy; 2024 Nishi</p>
             </footer>
-        </section>
-    <x-flash/>
+    </section>
+        <x-flash/>
 </body>
