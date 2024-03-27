@@ -23,8 +23,10 @@ Route::get('register', [RegisterController::class, 'create'])->middleware('guest
 Route::post('register', [RegisterController::class, 'store'])->middleware('guest');
 
 Route::middleware('can:admin')->group(function () {
-    Route::resource('admin/posts', AdminPostController::class)->except('show');
+    Route::resource('admin/posts', AdminPostController::class)->except('show','destroy');
 });
+
+Route::post('admin/posts/{id}', [AdminPostController::class, 'destroy'])->middleware('can:admin');
 
 Route::get('/profile', [ProfileController::class, 'edit']);
 

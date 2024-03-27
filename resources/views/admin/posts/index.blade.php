@@ -23,6 +23,9 @@
                                         </td>
 
                                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"> 
+                                            <form class="id">
+                                                <input data-post_id="{{$post->id}}" type="submit" class="btn btn-danger btn-dell" value="記事を削除する">
+                                            </form>
                                             <form method="POST" action="/admin/posts/{{ $post->id }}">
                                                 @csrf
                                                 @method('DELETE')
@@ -34,6 +37,37 @@
                                 @endforeach
                             </tbody>
                         </table>
+                            <script type="text/javascript">
+                                $.ajaxSetup({
+                                    headers: {
+                                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                                    }
+                                });
+
+                                $(function() {
+                                    $('.btn-danger').on('click', function() {
+                                    var deleteConfirm = confirm('削除してよろしいでしょうか？');
+                                    
+                                    if(deleteConfirm == true) {
+                                        var clickEle = $(this)
+                                        var postID = clickEle.attr('data-post_id');
+
+                                        $.ajax({
+                                            type: 'POST',
+                                            url: '/admin/posts/'+postID, //userID にはレコードのIDが代入されています
+                                            dataType: 'json',
+                                            data: {'id':postID},
+                                            })
+                                                        //”削除しても良いですか”のメッセージで”いいえ”を選択すると次に進み処理がキャンセルされます
+                                        }
+                                    else {
+                                        (function(e) {
+                                            e.preventDefault()
+                                        });
+                                    };
+                                });
+                                });
+                            </script>
                     </div>
                 </div>
             </div>

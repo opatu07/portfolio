@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
 
@@ -49,8 +50,10 @@ class AdminPostController extends Controller
         return back()->with('success', '記事が更新されました!');
     }
 
-    public function destroy(Post $post)
-    {  
+    public function destroy(Request $request ,Post $post)
+    {   
+        $post = Post::findOrFail($request->id);
+
         $post->delete();
 
         return back()->with('success', '記事を削除しました。');
