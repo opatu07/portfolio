@@ -38,7 +38,7 @@
                 @auth
                     <x-dropdown>
                         <x-slot name="trigger">
-                            <button class="text-xl text-orange-400 font-bold uppercase">
+                            <button class="md:text-xl text-orange-400 font-bold uppercase">
                                 こんにちは {{ auth()->user()->username }}さん!
                             </button>
                         </x-slot>
