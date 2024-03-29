@@ -27,7 +27,7 @@
 
                     <div class="flex items-center justify-end mt-4">
                         <x-form.button>
-                            {{ __('パスワードリセットリンク') }}
+                            {{ __('送信') }}
                         </x-form.button>
                     </div>
                 </form>
