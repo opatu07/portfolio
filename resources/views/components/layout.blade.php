@@ -1,11 +1,13 @@
 <!doctype html>
 
 <title>portfolio</title>
-<script src="https://cdn.tailwindcss.com"></script>
+
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://cdn.tailwindcss.com"></script>
 
 <style>
     html {
@@ -25,10 +27,10 @@
 
 <body class="flex flex-col min-h-screen">
     <section class="px-6 pt-8">
-        <nav class="md:flex md:justify-between md:items-center">
+        <nav class="flex justify-between items-center">
             <div>
                 <a href="/">
-                    <img src="/images/icon.jpg" alt="portfolio Logo" width="165" height="16">
+                    <img src="/images/icon.jpg" alt="portfolio Logo" width="130" height="16">
                 </a>
             </div>
 
@@ -71,12 +73,12 @@
                     </x-dropdown>
                 @else
                     <a href="/register"
-                       class="text-xl text-orange-400 font-bold uppercase">
+                       class="md:text-xl text-orange-400 font-bold uppercase">
                         ユーザー登録
                     </a>
 
                     <a href="/login"
-                       class="mx-14 text-orange-400 text-xl font-bold uppercase">
+                       class="md:text-xl md:mx-14 ml-7 text-orange-400  font-bold uppercase">
                         ログイン
                     </a>
                 @endauth
