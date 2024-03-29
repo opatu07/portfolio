@@ -1,5 +1,5 @@
-<header class="max-w-xl mx-auto mt-20 text-center">
-    <h1 class="md:text-4xl">
+<header class="max-w-xl mx-auto md:mt-20 mt-10 text-center">
+    <h1 class="md:text-4xl text-2xl">
         投稿記事一覧
     </h1>
 
