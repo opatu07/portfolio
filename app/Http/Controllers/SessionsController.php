@@ -28,7 +28,7 @@ class SessionsController extends Controller
 
         session()->regenerate();
 
-        return redirect('/')->with('success', 'アカウント登録できました。');
+        return redirect('/')->with('success', 'ログインが完了しました。');
     }
 
     public function logout()
