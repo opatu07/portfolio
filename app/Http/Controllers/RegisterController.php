@@ -20,6 +20,6 @@ class RegisterController extends Controller
         ]);
         
         auth()->login(User::create($attributes));
-        return redirect('/');
+        return redirect('/')->with('success', '新規登録が完了しました。');
     }
 }
