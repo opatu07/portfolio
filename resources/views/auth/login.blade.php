@@ -14,7 +14,6 @@
                             id="email"
                             type="email"
                         >
-                    <x-form.error name="email"/>
 
                     <!--パスワード-->
 
@@ -25,8 +24,9 @@
                                 id="password"
                                 type="password"
                             >
-                        <x-form.error name="password"/>
                     </div>
+                    
+                    <x-form.error name="email || password"/>
 
                     <x-form.button>ログイン!</x-form.button>
                 </form>

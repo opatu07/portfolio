@@ -22,14 +22,13 @@ class SessionsController extends Controller
 
         if (! auth()->attempt($validated)) {
             throw ValidationException::withMessages([
-                'email' => 'メールアドレスが登録されていません。',
-                'password' => 'パスワードが間違っています。'
+                'email || password' => 'メールアドレスとパスワードを再度ご確認ください。'
             ]);
         }
 
         session()->regenerate();
 
-        return view('auth/login')->with('success', 'アカウント登録できました。');
+        return redirect('/')->with('success', 'アカウント登録できました。');
     }
 
     public function logout()
