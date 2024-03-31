@@ -3,7 +3,10 @@
 namespace App\Http;
 
 use App\Http\Middleware\MustBeAdministrator;
+use Illuminate\Scheduling\Schedule;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+
 
 class Kernel extends HttpKernel
 {
@@ -66,4 +69,9 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
     ];
+
+    protected function schedule(Schedule $schedule): void
+    {
+        $schedule->command('auth:clear-resets')->everyFifteenMinutes();
+    }
 }

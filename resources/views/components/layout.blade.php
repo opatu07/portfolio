@@ -30,7 +30,7 @@
         <nav class="flex justify-between items-center">
             <div>
                 <a href="/">
-                    <img src="/images/icon.jpg" alt="portfolio Logo" width="130" height="16">
+                    <img src="/images/trans_icon.png" alt="portfolio Logo" width="130" height="16">
                 </a>
             </div>
 
