@@ -1,29 +1,39 @@
 @props(['heading'])
 
+<div class="max-w-40">
+    <x-dropdown>
+
+    <x-slot name="trigger">
+        <button class="text-lg font-bold mb-5 pb-2 border-b max-w-40">
+            {{ $heading }}
+        </button>
+    </x-slot>
+
+    <x-dropdown-item
+        href="/admin/posts"
+        :active="request()->is('admin/posts')"
+    >
+        全ての投稿
+    </x-dropdown-item>
+
+    <x-dropdown-item
+        href="/admin/posts/create"
+        :active="request()->is('admin/posts/create')"
+    >
+        新しい記事を作る
+    </x-dropdown-item>
+
+    </x-dropdown>
+</div>
+
 <section class="py-8 max-w-4xl mx-auto">
-    <h1 class="text-lg font-bold mb-8 pb-2 border-b">
-        {{ $heading }}
-    </h1>
 
     <div class="flex">
-        <aside class="w-48 flex-shrink-0">
-            <h4 class="font-semibold mb-4">ダッシュボード</h4>
-
-            <ul>
-                <li>
-                    <a href="/admin/posts" class="{{ request()->is('admin/posts') ? 'text-orange-500' : '' }}">全ての投稿</a>
-                </li>
-
-                <li>
-                    <a href="/admin/posts/create" class="{{ request()->is('admin/posts/create') ? 'text-orange-500' : '' }}">新しい記事を作る</a>
-                </li>
-            </ul>
-        </aside>
-
         <main class="flex-1">
             <x-panel>
                 {{ $slot }}
             </x-panel>
         </main>
     </div>
+    
 </section>
