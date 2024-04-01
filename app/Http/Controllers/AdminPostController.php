@@ -29,7 +29,7 @@ class AdminPostController extends Controller
             'thumbnail' => request()->file('thumbnail')->store('thumbnails') 
         ]));
 
-        return redirect('/');
+        return redirect('/')->with('success', '記事を作成しました。');
     }
 
     public function edit(Post $post)
