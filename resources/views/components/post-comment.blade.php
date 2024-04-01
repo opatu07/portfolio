@@ -8,7 +8,7 @@
 
                 <p class="text-xs">
                     投稿日
-                    <time>{{ $comment->created_at-> }}</time>
+                    <time>{{ $comment->created_at->diffForHumans() }}</time>
                 </p>
             </header>
 

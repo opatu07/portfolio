@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\NewPasswordController;
 use App\Http\Controllers\PasswordResetLinkController;
 use App\Http\Controllers\PasswordController;
+use App\Http\Controllers\PostCommentsController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
@@ -15,6 +16,7 @@ Route::get('/', [PostController::class, 'index'])->name('home');
 Route::get('login', [SessionsController::class, 'create'])->middleware('guest');
 Route::post('login', [SessionsController::class, 'store'])->middleware('guest');
 
+Route::post('posts/{post:slug}/comments', [PostCommentsController::class, 'store']);
 
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
 
