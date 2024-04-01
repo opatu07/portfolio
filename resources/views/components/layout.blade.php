@@ -36,59 +36,47 @@
 
             <div class="mt-8 md:mt-0 flex items-center">
                 @auth
-                    <x-dropdown>
-                        <x-slot name="trigger">
-                            <button class="text-xl text-orange-400 font-bold">
-                                こんにちは {{ auth()->user()->username }}さん!
-                            </button>
-                        </x-slot>
+                <x-dropdown>
+                    <x-slot name="trigger">
+                        <button class="text-xl text-orange-400 font-bold">
+                            こんにちは {{ auth()->user()->username }}さん!
+                        </button>
+                    </x-slot>
 
-                        @admin
-                            <x-dropdown-item
-                                href="/admin/posts"
-                                :active="request()->is('admin/posts')"
-                            >
-                                投稿一覧
-                            </x-dropdown-item>
-                        @endadmin
+                    @admin
+                    <x-dropdown-item href="/admin/posts" :active="request()->is('admin/posts')">
+                        投稿一覧
+                    </x-dropdown-item>
+                    @endadmin
 
-                        <x-dropdown-item
-                                href="/profile"
-                                
-                            >
-                                プロフィール
-                        </x-dropdown-item>
+                    <x-dropdown-item href="/profile">
+                        プロフィール
+                    </x-dropdown-item>
 
-                        <x-dropdown-item
-                            href="#"
-                            x-data="{}"
-                            @click.prevent="document.querySelector('#logout-form').submit()"
-                        >
-                            ログアウト
-                        </x-dropdown-item>
+                    <x-dropdown-item href="#" x-data="{}" @click.prevent="document.querySelector('#logout-form').submit()">
+                        ログアウト
+                    </x-dropdown-item>
 
-                        <form id="logout-form" method="POST" action="/logout" class="hidden">
-                            @csrf
-                        </form>
-                    </x-dropdown>
+                    <form id="logout-form" method="POST" action="/logout" class="hidden">
+                        @csrf
+                    </form>
+                </x-dropdown>
                 @else
-                    <a href="/register"
-                       class="md:text-xl text-orange-400 font-bold uppercase">
-                        ユーザー登録
-                    </a>
+                <a href="/register" class="md:text-xl text-orange-400 font-bold uppercase">
+                    ユーザー登録
+                </a>
 
-                    <a href="/login"
-                       class="md:text-xl md:mx-14 ml-7 text-orange-400  font-bold uppercase">
-                        ログイン
-                    </a>
+                <a href="/login" class="md:text-xl md:mx-14 ml-7 text-orange-400  font-bold uppercase">
+                    ログイン
+                </a>
                 @endauth
             </div>
         </nav>
 
         {{ $slot }}
-            <footer class="bg-gray-200">
-                    <p class="p-2 text-center text-xs">&copy; 2024 Nishi</p>
-            </footer>
+        <footer class="bg-gray-200">
+            <p class="p-2 text-center text-xs">&copy; 2024 Nishi</p>
+        </footer>
     </section>
-        <x-flash/>
+    <x-flash />
 </body>

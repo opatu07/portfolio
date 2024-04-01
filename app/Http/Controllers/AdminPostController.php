@@ -12,7 +12,7 @@ class AdminPostController extends Controller
     public function index()
     {
         return view('admin.posts.index', [
-            'posts' => Post::paginate(50)
+            'posts' => Post::paginate(7)
         ]);
     }
 
@@ -64,11 +64,11 @@ class AdminPostController extends Controller
         $post ??= new Post();
 
         return request()->validate([
-            'title' => 'required|max:30',
+            'title' => 'required|max:20',
             'thumbnail' => $post->exists ? ['image'] : ['image'],
-            'slug' => ['required', Rule::unique('posts', 'slug')->ignore($post), 'alpha_dash' , 'lowercase', 'max:50'],
-            'excerpt' => 'required|max:100',
-            'body' => 'required|max:1000',
+            'slug' => ['required', Rule::unique('posts', 'slug')->ignore($post), 'alpha_dash' , 'lowercase', 'max:10'],
+            'excerpt' => 'required|max:40',
+            'body' => 'required|max:500',
             'category_id' => ['required', Rule::exists('categories', 'id')]
         ]);
 
