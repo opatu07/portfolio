@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminPostController;
+use App\Http\Controllers\NewPasswordController;
 use App\Http\Controllers\PasswordResetLinkController;
 use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\PostController;
@@ -13,7 +14,7 @@ Route::get('/', [PostController::class, 'index'])->name('home');
 
 Route::get('login', [SessionsController::class, 'create'])->middleware('guest');
 Route::post('login', [SessionsController::class, 'store'])->middleware('guest');
-Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])->name('password.request');
+
 
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
 
@@ -38,11 +39,18 @@ Route::post('email/verification-notification', [EmailVerificationNotificationCon
 
 Route::put('password', [PasswordController::class, 'update']);
 
+Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])->name('password.request');
+
 Route::post('forgot-password', [PasswordResetLinkController::class, 'store'])
                 ->name('password.email');
 
 Route::get('reset-password/{token}', [NewPasswordController::class, 'create'])
             ->name('password.reset');
+
+Route::post('reset-password', [NewPasswordController::class, 'store'])
+            ->name('password.store');
+
+Route::put('password', [PasswordController::class, 'update'])->name('password.update');
 
 
 

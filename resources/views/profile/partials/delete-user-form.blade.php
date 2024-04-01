@@ -29,13 +29,13 @@
 
             <div class="mt-6">
                 <div class="pt-2">
-                    <x-form.label name="パスワード"/>  
+                    <x-form.label name="現在のパスワード"/>  
                         <input class="border border-gray-200 p-2 w-full rounded"
-                            name="password"
-                            id="password"
+                            name="account_password"
+                            id="account_password"
                             type="password"
                         >
-                    <x-form.error name="password"/>
+                    <x-form.error name="account_password"/>
                  </div>
             </div>
 
