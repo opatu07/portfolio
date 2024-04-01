@@ -64,7 +64,7 @@ class AdminPostController extends Controller
         $post ??= new Post();
 
         return request()->validate([
-            'title' => 'required|max:80',
+            'title' => 'required|max:30',
             'thumbnail' => $post->exists ? ['image'] : ['image'],
             'slug' => ['required', Rule::unique('posts', 'slug')->ignore($post), 'alpha_dash' , 'lowercase', 'max:50'],
             'excerpt' => 'required|max:100',
