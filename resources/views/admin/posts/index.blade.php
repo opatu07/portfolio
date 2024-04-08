@@ -48,7 +48,7 @@
 
                                         $.ajax({
                                             type: 'POST',
-                                            url: '/admin/posts/'+postID, //userID にはレコードのIDが代入されています
+                                            url: '/admin/posts/'+postID, 
                                             dataType: 'json',
                                             data: {'id':postID},
                                             })

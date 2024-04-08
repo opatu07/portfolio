@@ -4,7 +4,7 @@
             <x-panel>
                 <h1 class="text-center font-bold text-xl">ユーザー登録</h1>
 
-                <form method="POST" action="/register" class="mt-10">
+                <form method="POST" action="{{ route('user.register.store') }}" class="mt-10">
                     @csrf
                     <!--ユーザーネーム-->
 
