@@ -29,7 +29,7 @@
     <section class="px-6 pt-8">
         <nav class="flex justify-between items-center">
             <div>
-                <a href="/">
+                <a href="{{ route('home') }}">
                     <img src="/images/trans_icon.png" alt="portfolio Logo" width="130" height="16">
                 </a>
             </div>
@@ -49,11 +49,11 @@
                     </x-dropdown-item>
                     @endadmin
 
-                    <x-dropdown-item href="/profile">
+                    <x-dropdown-item href="{{ route('profile.edit') }}">
                         プロフィール
                     </x-dropdown-item>
 
-                    <x-dropdown-item href="#" x-data="{}" @click.prevent="document.querySelector('#logout-form').submit()">
+                    <x-dropdown-item href="{{ route('logout') }}" x-data="{}" @click.prevent="document.querySelector('#logout-form').submit()">
                         ログアウト
                     </x-dropdown-item>
 
@@ -62,11 +62,11 @@
                     </form>
                 </x-dropdown>
                 @else
-                <a href="/register" class="md:text-xl text-orange-400 font-bold uppercase">
+                <a href="{{ route('user.register.view') }}" class="md:text-xl text-orange-400 font-bold uppercase">
                     ユーザー登録
                 </a>
 
-                <a href="/login" class="md:text-xl md:mx-14 ml-7 text-orange-400  font-bold uppercase">
+                <a href="{{ route('login.view') }}" class="md:text-xl md:mx-14 ml-7 text-orange-400  font-bold uppercase">
                     ログイン
                 </a>
                 @endauth

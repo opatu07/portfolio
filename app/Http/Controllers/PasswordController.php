@@ -8,7 +8,8 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
-class PasswordController extends Controller
+class 
+PasswordController extends Controller
 {
     /**
      * Update the user's password.
