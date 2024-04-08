@@ -1,4 +1,5 @@
 <x-layout>
+    <x-auth-session-status class="mb-4" :status="session('status')" />
     <section class="px-6 py-8">
         <main class="max-w-lg mx-auto mt-10">
             <x-panel>
