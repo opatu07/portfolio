@@ -18,7 +18,8 @@ PasswordController extends Controller
     {   
         $request->validate([
             'current_password' => 'required',
-            'password' => 'required|confirmed'
+            'new_password' => 'required|confirmed',
+            'new_password_confirmation' => 'required',
         ]);
 
         if(!Hash::check($request->current_password, auth()->user()->password)){
@@ -26,7 +27,7 @@ PasswordController extends Controller
         }
 
         User::whereId(auth()->user()->id)->update([
-            'password' => Hash::make($request->password)
+            'password' => Hash::make($request->new_password)
         ]);
 
         return back()->with('success', 'パスワードを更新しました。');
