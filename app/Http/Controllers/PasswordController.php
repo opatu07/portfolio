@@ -18,7 +18,7 @@ PasswordController extends Controller
     {   
         $request->validate([
             'current_password' => 'required|current_password',
-            'new_password' => 'required|confirmed',
+            'new_password' => 'required|string|min:6|confirmed',
             'new_password_confirmation' => 'required',
         ]);
 
