@@ -16,7 +16,7 @@
 
                     <!-- Email Address -->
                     <div>
-                        <x-form.label name="メールアドレス"/>  
+                        <x-form.label name="登録時のメールアドレス"/>  
                         <input class="border border-gray-200 p-2 w-full rounded"
                             name="email"
                             id="email"

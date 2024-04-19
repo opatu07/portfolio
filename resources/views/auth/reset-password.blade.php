@@ -24,22 +24,22 @@
                     <div class="mt-4">
                         <x-form.label name="新しいパスワード"/>  
                         <input class="border border-gray-200 p-2 w-full rounded"
-                            name="password"
-                            id="password"
+                            name="new_password"
+                            id="new_password"
                             type="password"
                         >
-                        <x-form.error name="password"/>
+                        <x-form.error name="new_password"/>
                     </div>
 
                     <!-- Confirm Password -->
                     <div class="mt-4">
                         <x-form.label name="パスワードの確認"/>  
                         <input class="border border-gray-200 p-2 w-full rounded"
-                            name="password_confirmation"
-                            id="password_confirmation"
+                            name="new_password_confirmation"
+                            id="new_password_confirmation"
                             type="password"
                         >
-                        <x-form.error name="password_confirmation"/>
+                        <x-form.error name="new_password_confirmation"/>
                     </div>
 
                     <div class="flex items-center justify-end mt-4">

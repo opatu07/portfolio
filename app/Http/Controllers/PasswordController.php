@@ -17,16 +17,13 @@ PasswordController extends Controller
     public function update(Request $request): RedirectResponse
     {   
         $request->validate([
-            'current_password' => 'required',
-            'password' => 'required|confirmed'
+            'current_password' => 'required|current_password',
+            'new_password' => 'required|string|min:6|confirmed',
+            'new_password_confirmation' => 'required',
         ]);
 
-        if(!Hash::check($request->current_password, auth()->user()->password)){
-            return back()->with("error", "CURRENT_PASSWORDが間違っています。");
-        }
-
         User::whereId(auth()->user()->id)->update([
-            'password' => Hash::make($request->password)
+            'password' => Hash::make($request->new_password)
         ]);
 
         return back()->with('success', 'パスワードを更新しました。');
