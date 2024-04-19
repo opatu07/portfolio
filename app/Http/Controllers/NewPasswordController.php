@@ -8,9 +8,6 @@ use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Password;
-use Illuminate\Support\Str;
-use Illuminate\Validation\Rules;
 use Illuminate\View\View;
 
 class NewPasswordController extends Controller
@@ -32,8 +29,8 @@ class NewPasswordController extends Controller
     {
         $request->validate([
             'email' => 'required|email|exists:users',
-            'password' => 'required|string|min:6|confirmed',
-            'password_confirmation' => 'required'
+            'new_password' => 'required|string|min:6|confirmed',
+            'new_password_confirmation' => 'required'
         ]);
 
         $updatePassword = DB::table('password_reset_tokens')
@@ -48,7 +45,7 @@ class NewPasswordController extends Controller
         }
 
         $user = User::where('email', $request->email)
-                    ->update(['password' => Hash::make($request->password)]);
+                    ->update(['password' => Hash::make($request->new_password)]);
 
         DB::table('password_reset_tokens')->where(['email'=> $request->email])->delete();
 
