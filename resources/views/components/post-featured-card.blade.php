@@ -34,7 +34,7 @@
             <footer class="flex justify-between items-center mt-8">
                 <div>
                     <a href="/posts/{{ $post->slug }}"
-                       class="transition-colors duration-300 text-xs font-semibold bg-gray-200 hover:bg-gray-300 rounded-full py-2 px-8 "
+                       class="transition-colors duration-300 text-xs font-semibold bg-gray-200 hover:bg-gray-300 rounded-full py-2 px-5 lg:py-2 lg:px-8"
                     >この記事を読む</a>
                 </div>
             </footer>
