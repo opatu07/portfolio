@@ -33,7 +33,7 @@ CRUD処理
 
 # アプリの操作方法
 
-# ホーム画面
+## ホーム画面
 
 <img width="660" alt="layout" src="https://github.com/opatu07/portfolio/assets/156584393/30e62f94-2553-4bec-87e1-f978224d9b67">
 
@@ -45,7 +45,20 @@ CRUD処理
 ・記事のこの記事を読むを押すと記事の詳細を見れる  
 です
 
-# ユーザー登録
+## ユーザー登録
+
+<img width="660" alt="register" src="https://github.com/opatu07/portfolio/assets/156584393/63af3de9-a89c-4084-ae14-8aa5af39ddfd">
+
+ユーザー登録画面では  
+・ユーザー登録画面  
+・メールアドレス  
+・パスワード  
+を設定してもらうと登録できます
+
+## ユーザー登録後
+<img width="660" alt="afterRegister" src="https://github.com/opatu07/portfolio/assets/156584393/a61e8c16-c088-439e-b7c8-fbfda2135013">
+
+ユーザー登録後は右上にユーザーネームが表示されて、右下に青色のフラッシュが出てきます。
 
 
 
