@@ -89,6 +89,28 @@ CRUD処理
 
 送信後はこんな感じです
 
+## パスワードリセットメール内容
+
+<img width="660" alt="mail" src="https://github.com/opatu07/portfolio/assets/156584393/6a74491e-712d-4eb6-bf25-0435fb37bd56">
+
+パスワードリセットメールは __パスワードリセット__ のボタンを押すか下記URLをブラウザでコピペしてもらうとパスワードリセット画面に移動できます。
+
+## パスワードリセット画面
+
+<img width="660" alt="passwordReset" src="https://github.com/opatu07/portfolio/assets/156584393/c6897556-7288-409c-bd42-ffdcd3ea0536">
+
+パスワードリセットには  
+・メールアドレス  
+・新しいパスワード  
+・パスワードの確認  
+を入力してもらうとできます
+
+## パスワードリセット後
+
+<img width="660" alt="afterPassword" src="https://github.com/opatu07/portfolio/assets/156584393/bc3d034b-6c81-4651-aaed-0e137d1794a9">
+
+パスワードリセット後は右下にフラッシュが出てログイン画面に移動するのでログインできるようになってます。
+
 
 
 
