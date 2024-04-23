@@ -76,8 +76,18 @@ CRUD処理
 
 ログイン後は右上にユーザーネームが表示されて、右下に青色のフラッシュが出てきます。
 
-## 
+## パスワードリセット
+ログイン画面から　__パスワードを忘れてしまった方へ__　を押してもらうとパスワードリセット用のメール送信画面に移動できます。
 
+
+<img width="660" alt="password_mail" src="https://github.com/opatu07/portfolio/assets/156584393/29a90e03-5990-472f-aa18-7ffe656b6280">
+
+新規登録画面で設定したメールアドレスを入力してもらってパスワードリセット用のメールを送信できます。
+
+## パスワードリセットメール送信後
+<img width="660" alt="afterPassword_mail" src="https://github.com/opatu07/portfolio/assets/156584393/83a6d74d-b44e-4f09-b397-1e98d6bc6f98">
+
+送信後はこんな感じです
 
 
 
