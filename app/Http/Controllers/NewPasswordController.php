@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
-use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -29,7 +28,7 @@ class NewPasswordController extends Controller
     {
         $request->validate([
             'email' => 'required|email|exists:users',
-            'new_password' => 'required|string|min:6|confirmed',
+            'new_password' => 'required|min:6|confirmed',
             'new_password_confirmation' => 'required'
         ]);
 
@@ -38,7 +37,6 @@ class NewPasswordController extends Controller
                               'email' => $request->email, 
                               'token' => $request->token
                             ]);
-
 
         if(!$updatePassword){
             return back()->withInput()->with('error', 'パスワードを更新できませんでした。');
