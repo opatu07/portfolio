@@ -111,6 +111,20 @@ CRUD処理
 
 パスワードリセット後は右下にフラッシュが出てログイン画面に移動するのでログインできるようになってます。
 
+## カテゴリー検索
+
+<img width="660" alt="category" src="https://github.com/opatu07/portfolio/assets/156584393/4ad9d0e3-02fe-4149-b412-1553d5da99f2">
+
+カテゴリー検索ボタンを押すとカテゴリーが出てきて選択ができるようになってます。
+
+## カテゴリー検索後
+<img width="660" alt="afterCategory" src="https://github.com/opatu07/portfolio/assets/156584393/0372000b-e4b0-4095-910c-db0122240684">
+
+カテゴリー検索後はカテゴリー検索ボタンに検索したカテゴリーが表示されます。
+
+## タイトル検索
+　
+
 
 
 
