@@ -179,7 +179,99 @@ CRUD処理
 
 <img width="660" alt="afterDeleteAccount" src="https://github.com/opatu07/portfolio/assets/156584393/850591dd-6335-4a5c-b86b-6ddab9129b0e">
 
-アカウントの削除後はホームページに移動して右下にフラッシュが出ます。
+アカウントの削除後はホーム画面に移動して右下にフラッシュが出ます。
+
+
+## 権限アカウントでログインする
+
+<img width="660" alt="author" src="https://github.com/opatu07/portfolio/assets/156584393/d0a0c34e-1539-4b56-891e-7f57c6c98300">
+
+権限アカウントでログインして右上の名前を押すとドロップボタンが出てきます。
+
+権限アカウントでできることは  
+・記事についての操作  
+・プロフィールの修正  
+・ログアウト  
+です。  
+
+## 記事についての操作
+
+投稿一覧を押してもらうと  
+
+<img width="660" alt="dashboard" src="https://github.com/opatu07/portfolio/assets/156584393/294ab5e2-82ae-48c2-88f2-c6b9293fd284">
+
+ダッシュボード画面に移動します。
+ここでは  
+・記事の編集  
+・記事の削除  
+
+またダッシュボードを押してもらうと  
+
+<img width="300" alt="dashboardDropdown" src="https://github.com/opatu07/portfolio/assets/156584393/5fd94474-b549-499b-a3d6-dd6d662dd181">
+
+ドロップダウンが出てくるので  
+・ダッシュボード画面
+・新しい記事を作る  
+この2つができます。
+
+# 記事を新規追加
+
+<img width="660" alt="createArticle" src="https://github.com/opatu07/portfolio/assets/156584393/e50e7e29-4c06-4cb4-803a-7edcc169cf0c">
+
+記事の新規追加画面では  
+・タイトル  
+・スラッグ  
+・サムネイル  
+・要約  
+・内容  
+・カテゴリー  
+を登録できます。  
+また左上の __新規投稿__ を押すとドロップダウンが出てきてダッシュボードと記事の新規追加ページに移動できます。
+
+# 記事新規追加後
+
+<img width="660" alt="showArticle" src="https://github.com/opatu07/portfolio/assets/156584393/63e0c711-ed32-41d9-8ad4-080c0f630ee6">
+
+記事を新規追加後はホーム画面に移動して記事が表示されていることを確認できます。  
+また右下にフラッシュが出てきます。
+
+
+# 記事の編集
+
+<img width="660" alt="updateArticle" src="https://github.com/opatu07/portfolio/assets/156584393/37f853f8-a421-4e73-aa57-33fa7cbea5ee">
+
+記事の編集画面では前の記事の情報を元に  
+・タイトル  
+・スラッグ  
+・サムネイル  
+・要約  
+・内容  
+・カテゴリー  
+を編集できます。    
+また左上の __記事を編集する:~__ を押すとドロップダウンが出てきてダッシュボードと記事の新規追加ページに移動できます。
+
+# 記事の編集後
+
+<img width="660" alt="showArticleUpdated" src="https://github.com/opatu07/portfolio/assets/156584393/caaf7dd9-5101-4108-9e6d-c65e01061071">
+
+記事を編集後はホーム画面に移動して記事が表示されていることを確認できます。  
+また右下にフラッシュが出てきます。
+
+## 記事の削除
+
+記事の削除は __記事を削除する__ を押してもらうと
+
+
+<img width="660" alt="deleteConfirm" src="https://github.com/opatu07/portfolio/assets/156584393/e9358eed-e58b-48c9-858c-3e9663171a0f">
+
+削除の確認が出てくるのでOKを押してもらうと  
+
+右下に  
+
+<img width="660" alt="deleteFlash" src="https://github.com/opatu07/portfolio/assets/156584393/8230c7d5-858f-4607-b615-c72500326464">
+
+フラッシュが出てきます。
+
 
 
 
