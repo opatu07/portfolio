@@ -133,7 +133,7 @@ CRUD処理
 
 ## プロフィールの修正
 プロフィールの修正画面では  
-・プロフィール情報  
+・ユーザーネーム  
 ・メールアドレス  
 ・パスワード  
 の更新ができます。  
@@ -141,9 +141,46 @@ CRUD処理
 
 ## プロフィール情報の変更
 
+<img width="660" alt="updateProfile" src="https://github.com/opatu07/portfolio/assets/156584393/a50565d9-a5b7-4fa2-a08d-3502bf2e0e12">
+プロフィール情報の更新では  
+・ユーザーネーム  
+・メールアドレス  
+が変更できます。  
+変更後に保存ボタンを押してもらうと設定が反映されます。
+
+## プロフィール情報の変更後
+<img width="660" alt="afterUpdateProfile" src="https://github.com/opatu07/portfolio/assets/156584393/509380c9-8f3d-4672-9eee-6ae5eb6c6284">
+プロフィール情報が更新されると右下にフラッシュが出てきます。
+
 ## パスワードの更新
 
+<img width="660" alt="updatePassword" src="https://github.com/opatu07/portfolio/assets/156584393/88eac77d-36cf-43d3-b49f-dde3fc57e48b">
+パスワードの更新をするには
+・現在のパスワード  
+・新しいパスワード  
+・パスワードの確認  
+を入力してください。  
+変更後に保存ボタンを押してもらうと設定が反映されます。
+
+## パスワードの更新後
+<img width="660" alt="afterUpdatePassword" src="https://github.com/opatu07/portfolio/assets/156584393/0dcfcc5f-dbc2-4309-91ea-14306e0d4a22">
+パスワードの更新後は右下にフラッシュが出てきます。
+
 ## アカウントの削除
+<img width="660" alt="deleteAccount" src="https://github.com/opatu07/portfolio/assets/156584393/d8fc49d2-934c-4dc6-830c-58a3503e9abe">
+
+アカウントの削除を行うにはアカウントを削除ボタンを押してください。  
+
+<img width="660" alt="deleteAccountConfirm" src="https://github.com/opatu07/portfolio/assets/156584393/2dd68840-a8ca-4d83-a346-ffc126af1962">
+
+アカウントの削除のためのパスワード入力があるのでパスワードを入力してください。  
+
+## アカウントの削除後
+
+<img width="660" alt="afterDeleteAccount" src="https://github.com/opatu07/portfolio/assets/156584393/850591dd-6335-4a5c-b86b-6ddab9129b0e">
+
+アカウントの削除後はホームページに移動して右下にフラッシュが出ます。
+
 
 
 
