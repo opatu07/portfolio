@@ -47,7 +47,7 @@ class AdminPostController extends Controller
 
         $post->update($attributes);
 
-        return back()->with('success', '記事が更新されました!');
+        return redirect('/')->with('success', '記事が更新されました!');
     }
 
     public function destroy(Request $request ,Post $post)
