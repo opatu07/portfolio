@@ -74,4 +74,8 @@ class Kernel extends HttpKernel
     {
         $schedule->command('auth:clear-resets')->everyFifteenMinutes();
     }
+
+    protected $commands = [
+        Commands\WriteLog::Class,
+    ];
 }
