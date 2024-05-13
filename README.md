@@ -10,6 +10,12 @@ http://219.94.251.174/
 <br>
 <br>
 
+# qiitaでwebアプリ開発で意識したことをまとめています
+https://qiita.com/opatu07/items/b8be93aa544b2bec5020
+<br>
+<br>
+<br>
+
 # 開発環境
 macOS Sonoma 14.4.1  
 
